@@ -6,7 +6,7 @@ describe('task form component', () => {
 
     it('should render the task form', () => {
 
-        render(<TaskForm />);
+        render(<TaskForm task="teste" />);
         const el = document.querySelector('form');
         expect(el).toBeInTheDocument();
     })

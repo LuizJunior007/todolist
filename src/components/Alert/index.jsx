@@ -1,3 +1,5 @@
+import P from 'prop-types';
+
 const Alert = ({ msg }) => {
 
     return(
@@ -6,6 +8,10 @@ const Alert = ({ msg }) => {
         </div>
     );
 
+}
+
+Alert.propTypes = {
+    msg: P.string.isRequired
 }
 
 export default Alert;

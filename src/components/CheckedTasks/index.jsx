@@ -1,4 +1,5 @@
 import Title from "../Title";
+import P from 'prop-types';
 
 const CheckedTasks = ({ checkedTasks, deleteCheckedTask }) => {
 
@@ -35,6 +36,11 @@ const CheckedTasks = ({ checkedTasks, deleteCheckedTask }) => {
         </div>
     );
 
+}
+
+CheckedTasks.protoTypes = {
+    checkedTasks: P.array.isRequired,
+    deleteCheckedTask: P.array
 }
 
 export default CheckedTasks;

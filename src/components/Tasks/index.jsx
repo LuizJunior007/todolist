@@ -1,4 +1,5 @@
 import Title from "../Title";
+import P from 'prop-types';
 
 const Tasks = ({ tasks, deleteTask, checkTask }) => {
 
@@ -35,6 +36,14 @@ const Tasks = ({ tasks, deleteTask, checkTask }) => {
             </table>
         </div>
     );
+
+}
+
+Tasks.propTypes = {
+
+    tasks: P.array.isRequired,
+    deleteTask: P.func.isRequired,
+    checkTask: P.func.isRequired
 
 }
 

@@ -1,5 +1,6 @@
 import CheckedTasks from "../CheckedTasks";
 import Tasks from "../Tasks";
+import P from 'prop-types';
 
 const Row = ({ tasks, deleteTask, checkTask, checkedTasks, deleteCheckedTask }) => {
 
@@ -15,6 +16,14 @@ const Row = ({ tasks, deleteTask, checkTask, checkedTasks, deleteCheckedTask }) 
         </div>
     );
 
+}
+
+Row.propTypes = {
+    tasks: P.array.isRequired,
+    deleteTask: P.func.isRequired,
+    checkTask: P.func.isRequired,
+    checkedTasks: P.array,
+    deleteCheckedTask: P.array
 }
 
 export default Row;

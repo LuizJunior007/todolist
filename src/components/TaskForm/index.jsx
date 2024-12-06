@@ -1,3 +1,5 @@
+import P from 'prop-types';
+
 const TaskForm = ({ task, changedValue, addTask, taskInput }) => {
 
     return(
@@ -15,6 +17,14 @@ const TaskForm = ({ task, changedValue, addTask, taskInput }) => {
             </div>
         </form>
     );
+
+}
+
+TaskForm.propTypes = {
+
+    task: P.string.isRequired,
+    changedValue: P.func.isRequired,
+    addTask: P.func.isRequired
 
 }
 
